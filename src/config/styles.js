@@ -13,44 +13,41 @@ var styles = StyleSheet.create({
     flex: 1,
   },
   buttonrsfalse:{
-     flex: 1,
-     height: 40,
-   // backgroundColor: '#326964',
-   backgroundColor: '#253f3e',
+    flex: 1,
+    height: 40,
+    backgroundColor: '#253f3e',
     alignItems: 'center',
     justifyContent: 'center',
     margin: 0,
   },
-    buttonrstrue:{
-     flex: 1,
-     height: 40,
+  buttonrstrue:{
+    flex: 1,
+    height: 40,
     backgroundColor: '#326964',
     alignItems: 'center',
     justifyContent: 'center',
     margin: 0,
   },
   txinp:{
-    width:110, 
+    width: 110, 
     borderColor: 'gray',
-     borderWidth: 1,
-      borderBottomLeftRadius:5,
-      borderBottomRightRadius:5,
-       borderTopLeftRadius:5,
-      borderTopRightRadius:5,
-      backgroundColor:"white",
-
+    borderWidth: 1,
+    borderBottomLeftRadius:5,
+    borderBottomRightRadius:5,
+    borderTopLeftRadius:5,
+    borderTopRightRadius:5,
+    backgroundColor:"white",
   },
-    txcost:{
+  txcost:{
     width:200,
     height:35, 
     borderColor: 'gray',
-     borderWidth: 1,
-      borderBottomLeftRadius:5,
-      borderBottomRightRadius:5,
-       borderTopLeftRadius:5,
-      borderTopRightRadius:5,
-      backgroundColor:"white",
-     
+    borderWidth: 1,
+    borderBottomLeftRadius:5,
+    borderBottomRightRadius:5,
+    borderTopLeftRadius:5,
+    borderTopRightRadius:5,
+    backgroundColor:"white",
   },
   li: {
     backgroundColor: 'transparent',
@@ -63,9 +60,9 @@ var styles = StyleSheet.create({
     flexDirection:'row',
     justifyContent:'space-between'
   },
-    txtm: {
-      fontSize:13,
-      color:'white'
+  txtm: {
+    fontSize:13,
+    color:'white'
   },
     co: {
     backgroundColor: 'green',
@@ -78,8 +75,7 @@ var styles = StyleSheet.create({
     flexDirection:'row',
     justifyContent:'space-between',
   },
-
-    liNext: {
+  liNext: {
     backgroundColor: 'green',
     borderBottomColor: '#eee',
     borderColor: 'transparent',
@@ -178,7 +174,6 @@ var styles = StyleSheet.create({
     //marginTop:20,
     alignItems: 'stretch',
     padding: 1
-
   },
   wallpaperBar:{
     flex:1,
@@ -186,20 +181,35 @@ var styles = StyleSheet.create({
     height:null,
     alignItems: 'stretch',
     padding: 1
-
   },
   backgrroundLogin:{
-    flex:1,flexDirection: 'row',  justifyContent:'center',marginTop:30, backgroundColor:'rgba(150, 116, 82, 0.7)', borderBottomLeftRadius:5,
-      borderBottomRightRadius:5,
-       borderTopLeftRadius:5,
-      borderTopRightRadius:5,marginLeft: 40,marginRight: 40, alignItems:'center'
+    flex:1,flexDirection: 'row',
+    justifyContent: 'center',
+    marginTop:30,
+    backgroundColor: 'rgba(150, 116, 82, 0.7)',
+    borderBottomLeftRadius: 5,
+    borderBottomRightRadius: 5,
+    borderTopLeftRadius: 5,
+    borderTopRightRadius: 5,
+    marginLeft: 40,
+    marginRight: 40,
+    alignItems:'center'
   },
     backgrroundLoginButton:{
       height: 45, width:240,
-    flexDirection: 'row',  justifyContent:'center',marginTop:5, backgroundColor:'#0d8651', borderBottomLeftRadius:5,
-      borderBottomRightRadius:5,
-       borderTopLeftRadius:5,
-      borderTopRightRadius:5,marginLeft: 40,marginRight: 40, alignItems:'center',borderColor:'#067644',borderBottomWidth:4
+      flexDirection: 'row',
+      justifyContent:'center',
+      marginTop:5,
+      backgroundColor:'#0d8651',
+      borderBottomLeftRadius:5,
+      borderBottomRightRadius: 5,
+      borderTopLeftRadius: 5,
+      borderTopRightRadius: 5,
+      marginLeft: 40,
+      marginRight: 40,
+      alignItems: 'center',
+      borderColor: '#067644',
+      borderBottomWidth: 4
   },
       backgrroundModalButton:{
       height: 45, width:240,
@@ -219,24 +229,23 @@ var styles = StyleSheet.create({
     flexDirection: 'row',marginTop:5, backgroundColor:'#0d8651', 
      alignItems:'center',borderColor:'#067644',borderBottomWidth:4
   },
-        backgrroundHomeRed:{
-      height: 55, width:null,
-        justifyContent:'space-between',
+  backgrroundHomeRed:{
+    height: 55, width:null,
+    justifyContent:'space-between',
     flexDirection: 'row',marginTop:5, backgroundColor:'#ea2e22',
-     alignItems:'center',borderColor:'#d42719',borderBottomWidth:4,
+    alignItems:'center',borderColor:'#d42719',borderBottomWidth:4,
   },
-   backgrroundInput:{
-     justifyContent:'center',marginTop:30,marginBottom:10, backgroundColor:'rgba(150, 116, 82, 0.7)', borderBottomLeftRadius:5,
-      borderBottomRightRadius:5,
-       borderTopLeftRadius:5,
-      borderTopRightRadius:5,marginLeft: 40,marginRight: 40, alignItems:'center'
-  }
-  ,backgrroundReg:{
-       flex:2,flexDirection: 'row',  justifyContent:'center',marginTop:30, backgroundColor:'transparent', borderBottomLeftRadius:5,
-      marginLeft: 40,marginRight: 40, 
-      borderBottomWidth: 1,
-
-      borderColor: 'rgba(150, 116, 82, 0.7)',
+  backgrroundInput:{
+    justifyContent:'center',marginTop:30,marginBottom:10, backgroundColor:'rgba(150, 116, 82, 0.7)', borderBottomLeftRadius:5,
+    borderBottomRightRadius:5,
+    borderTopLeftRadius:5,
+    borderTopRightRadius:5,marginLeft: 40,marginRight: 40, alignItems:'center'
+  },
+  backgrroundReg:{
+    flex:2,flexDirection: 'row',  justifyContent:'center',marginTop:30, backgroundColor:'transparent', borderBottomLeftRadius:5,
+    marginLeft: 40,marginRight: 40,
+    borderBottomWidth: 1,
+    borderColor: 'rgba(150, 116, 82, 0.7)',
   },
   whitext:{
     color:'white',fontWeight: 'bold'
