@@ -1,0 +1,26 @@
+dependencies: \
+  /Users/dopa/ReactPJ/equilinked/node_modules/react-native/React/Base/RCTJavaScriptLoader.mm \
+  /Users/dopa/ReactPJ/equilinked/node_modules/react-native/React/Base/RCTJavaScriptLoader.h \
+  /Users/dopa/ReactPJ/equilinked/node_modules/react-native/React/Base/RCTDefines.h \
+  /Users/dopa/ReactPJ/equilinked/ios/build/Build/Products/Debug-iphonesimulator/include/cxxreact/JSBundleType.h \
+  /Users/dopa/ReactPJ/equilinked/ios/build/Build/Products/Debug-iphonesimulator/include/jschelpers/JavaScriptCore.h \
+  /Users/dopa/ReactPJ/equilinked/ios/build/Build/Products/Debug-iphonesimulator/include/jschelpers/JSCWrapper.h \
+  /Users/dopa/ReactPJ/equilinked/node_modules/react-native/React/Base/RCTBridge.h \
+  /Users/dopa/ReactPJ/equilinked/node_modules/react-native/React/Base/RCTBridgeDelegate.h \
+  /Users/dopa/ReactPJ/equilinked/node_modules/react-native/React/Base/RCTBridgeModule.h \
+  /Users/dopa/ReactPJ/equilinked/node_modules/react-native/React/Base/RCTFrameUpdate.h \
+  /Users/dopa/ReactPJ/equilinked/node_modules/react-native/React/Base/RCTInvalidating.h \
+  /Users/dopa/ReactPJ/equilinked/node_modules/react-native/React/Base/RCTConvert.h \
+  /Users/dopa/ReactPJ/equilinked/node_modules/react-native/React/Views/RCTAnimationType.h \
+  /Users/dopa/ReactPJ/equilinked/node_modules/react-native/React/Views/RCTBorderStyle.h \
+  /Users/dopa/ReactPJ/equilinked/node_modules/react-native/React/Base/RCTLog.h \
+  /Users/dopa/ReactPJ/equilinked/node_modules/react-native/React/Base/RCTAssert.h \
+  /Users/dopa/ReactPJ/equilinked/node_modules/react-native/React/Base/RCTUtils.h \
+  /Users/dopa/ReactPJ/equilinked/node_modules/react-native/React/Views/RCTPointerEvents.h \
+  /Users/dopa/ReactPJ/equilinked/node_modules/react-native/React/Views/RCTTextDecorationLineType.h \
+  /Users/dopa/ReactPJ/equilinked/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/Yoga.h \
+  /Users/dopa/ReactPJ/equilinked/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGEnums.h \
+  /Users/dopa/ReactPJ/equilinked/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGMacros.h \
+  /Users/dopa/ReactPJ/equilinked/node_modules/react-native/React/Base/RCTMultipartDataTask.h \
+  /Users/dopa/ReactPJ/equilinked/node_modules/react-native/React/Base/RCTMultipartStreamReader.h \
+  /Users/dopa/ReactPJ/equilinked/node_modules/react-native/React/Base/RCTPerformanceLogger.h

@@ -1,0 +1,23 @@
+dependencies: \
+  /Users/dopa/ReactPJ/equilinked/node_modules/react-native/React/Modules/RCTDevSettings.mm \
+  /Users/dopa/ReactPJ/equilinked/node_modules/react-native/React/Modules/RCTDevSettings.h \
+  /Users/dopa/ReactPJ/equilinked/node_modules/react-native/React/Base/RCTBridge.h \
+  /Users/dopa/ReactPJ/equilinked/node_modules/react-native/React/Base/RCTBridgeDelegate.h \
+  /Users/dopa/ReactPJ/equilinked/node_modules/react-native/React/Base/RCTJavaScriptLoader.h \
+  /Users/dopa/ReactPJ/equilinked/node_modules/react-native/React/Base/RCTDefines.h \
+  /Users/dopa/ReactPJ/equilinked/node_modules/react-native/React/Base/RCTBridgeModule.h \
+  /Users/dopa/ReactPJ/equilinked/node_modules/react-native/React/Base/RCTFrameUpdate.h \
+  /Users/dopa/ReactPJ/equilinked/node_modules/react-native/React/Base/RCTInvalidating.h \
+  /Users/dopa/ReactPJ/equilinked/ios/build/Build/Products/Debug-iphonesimulator/include/jschelpers/JavaScriptCore.h \
+  /Users/dopa/ReactPJ/equilinked/ios/build/Build/Products/Debug-iphonesimulator/include/jschelpers/JSCWrapper.h \
+  /Users/dopa/ReactPJ/equilinked/node_modules/react-native/React/Base/RCTBridge+Private.h \
+  /Users/dopa/ReactPJ/equilinked/node_modules/react-native/React/Base/RCTEventDispatcher.h \
+  /Users/dopa/ReactPJ/equilinked/node_modules/react-native/React/Modules/RCTJSCSamplingProfiler.h \
+  /Users/dopa/ReactPJ/equilinked/node_modules/react-native/React/Base/RCTLog.h \
+  /Users/dopa/ReactPJ/equilinked/node_modules/react-native/React/Base/RCTAssert.h \
+  /Users/dopa/ReactPJ/equilinked/node_modules/react-native/React/Base/RCTUtils.h \
+  /Users/dopa/ReactPJ/equilinked/node_modules/react-native/React/DevSupport/RCTPackagerClient.h \
+  /Users/dopa/ReactPJ/equilinked/node_modules/react-native/React/Profiler/RCTProfile.h \
+  /Users/dopa/ReactPJ/equilinked/node_modules/react-native/React/DevSupport/RCTPackagerConnection.h \
+  /Users/dopa/ReactPJ/equilinked/node_modules/react-native/React/DevSupport/RCTInspectorDevServerHelper.h \
+  /Users/dopa/ReactPJ/equilinked/node_modules/react-native/React/Inspector/RCTInspectorPackagerConnection.h

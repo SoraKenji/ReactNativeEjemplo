@@ -6,7 +6,7 @@ export default class userTab extends React.Component {
         header: null,
     }
     render() {
-        var year = [];
+        var years = [];
         var columnMonths = [];
         var Month = [];
         var weekOfTheMonth = [];
@@ -26,7 +26,11 @@ export default class userTab extends React.Component {
 
         //'L','M','M','J','V','S','D'
         for(let y = 0; y < 6; y++){
+            Month = [];
             for(let x = 0; x < 2; x++){
+                firsttime = 0;
+                numberOfDay=1;
+                weekOfTheMonth = [];
                 weekOfTheMonth.push(
                     <View key = {k} style={{
                         flexDirection: 'row'}}>
@@ -134,14 +138,19 @@ export default class userTab extends React.Component {
             }
             columnMonths.push(
                 <View key = {k} style={{
-                    flexDirection: 'column'}}>
+                    flexDirection: 'row'}}>
                     {Month}
-                </View>
-            )
+                </View>)
         }
+        years.push(
+            <View key = {k} style={{
+                flexDirection: 'column'}}>
+                {columnMonths}
+            </View>
+        )
         return (
         <View>
-            { Month }
+            { years }
         </View>
       );
     }

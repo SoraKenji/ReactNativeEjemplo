@@ -10,9 +10,12 @@ export default class calendarTab extends React.Component {
     render() {
         return (
           <View>
-            <CalendarList current={'2018-01-01'} 
-                pastScrollRange={0}
-                futureScrollRange={12}/>
+            <CalendarList current={'2018-01-01'}
+                pastScrollRange={3}
+                futureScrollRange={12}
+                // Specify theme properties to override specific styles for calendar parts. Default = {}
+               
+                />
           </View>
         );
     }
