@@ -4,6 +4,7 @@ import { Image }from 'react-native';
 import Login from '../screens/Login';
 import Registro from '../screens/Registro';
 import Home from '../screens/home/home';
+import Maincamera from '../screens/Maincamera';
 
 export const LogReg = StackNavigator ({
         Main:{
@@ -14,6 +15,9 @@ export const LogReg = StackNavigator ({
         },
         Home:{
             screen:Home,
+        },
+        Maincamera:{
+            screen:Maincamera,
         }
     }
 );

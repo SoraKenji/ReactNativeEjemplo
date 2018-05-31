@@ -1,91 +1,135 @@
 import React from 'react';
-import {  Dimensions,
-    StyleSheet,
-    Text,
-    TouchableOpacity,
-    View, 
-    FlatList,Image} from 'react-native';
+import {
+  Dimensions,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+  FlatList, Image, Modal, TouchableHighlight, CameraRoll, ScrollView, Button
+} from 'react-native';
 import { RNCamera } from 'react-native-camera';
+import { Maincamera } from '../../Maincamera';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
 export default class imagesTab extends React.Component {
-    static navigationOptions = {
-        header: null,
-    }
-    constructor(props) {
-      super(props);
-  
-      this.state = {
-        
-        data: '',
-        refreshing: false,
-      };
-    }
-  
+  static navigationOptions = {
+    header: null,
+  }
+  constructor(props) {
+    super(props);
 
-    render() {
-        return (
-          <View style={styles.container}>
-            <RNCamera
-                ref={ref => {
-                  this.camera = ref;
-                }}
-                style = {styles.preview}
-                
-                type={RNCamera.Constants.Type.back}
-                flashMode={'off'}
-                permissionDialogTitle={'Permission to use camera'}
-                permissionDialogMessage={'We need your permission to use your camera phone'}
-            />
-            <View style={{flex: 0, flexDirection: 'row', justifyContent: 'center',}}>
-          
-             <Image
-            style={{width: 50, height: 50}}
-            source={{uri: this.state.data}}
-          />
-
-            
-            <TouchableOpacity
-                onPress={this.takePicture.bind(this)}
-                style = {styles.capture}
-            >
-                <Text style={{fontSize: 14}}> Capturar </Text>
-            </TouchableOpacity>
-            </View>
-          </View>
-        );
-      }
+    this.state = {
+      photos: [],
+      refreshing: false,
+    };
+  }
+  componentDidMount() {
     
-      takePicture = async function() {
-        if (this.camera) {
-          const options = { quality: 0.5, base64: true };
-          const data = await this.camera.takePictureAsync(options)
-          console.log(data.uri);
+  }
+  componentWillMount() {
+  
+
+
+    fetch("https://equilinked.azurewebsites.net/api/propietarios/37/albumes", {
+      //fetch("https://equilinked.azurewebsites.net/api/propietarios/37/fotografias/854", {
+      method: "GET",
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+    })
+      .then((response) => response.json())
+      .then((responseData) => {
+        console.log("photodata:", responseData);
+        // this.saveSession();
+        //this.setState({progress: false}); 
+        this.setState({
+          photo: Image
+        });
+        console.log(responseData.ID);
+      }).catch((error) => {
+        if (error == "TypeError: Network request failed") {
           this.setState({
-            data: data.uri
+            error: 'Error de conexion',
+            progress: false
           });
-
+        } else {
+          this.setState({
+            error: 'Email o Contraseña no valida',
+            //  progress: false
+          });
         }
-      };
-    }
-    
-    const styles = StyleSheet.create({
-      container: {
-        flex: 1,
-        flexDirection: 'column',
-        backgroundColor: 'black'
-      },
-      preview: {
-        flex: 1,
-        justifyContent: 'flex-end',
-        alignItems: 'center'
-      },
-      capture: {
-        flex: 0,
-        backgroundColor: '#fff',
-        borderRadius: 5,
-        padding: 15,
-        paddingHorizontal: 20,
-        alignSelf: 'center',
-        margin: 20
-      }
-    });
+        this.setState({ progress: false });
+      })
+      .done();
+  }
+
+
+
+
+
+
+  camera() {
+    this.props.navigation.navigate('Maincamera');
+  }
+
+  _handleButtonPress = () => {
+    CameraRoll.getPhotos({
+      first: 20,
+      assetType: 'Photos',
+      groupTypes: 'Album',
+    })
+      .then(r => {
+        this.setState({ photos: r.edges });
+      })
+      .catch((err) => {
+        //Error Loading Images
+      });
+  };
+  render() {
+    return (
+      <View>
+        <Button title="Load Images" onPress={this._handleButtonPress} />
+        <Button title="Takephoto" onPress={this.camera.bind(this)} />
+        <ScrollView>
+          {this.state.photos.map((p, i) => {
+            return (
+              <Image
+                key={i}
+                style={{
+                  width: 300,
+                  height: 100,
+                }}
+                source={{ uri: p.node.image.uri }}
+              />
+            );
+          })}
+        </ScrollView>
+      </View>
+    );
+  }
+
+
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    flexDirection: 'column',
+    backgroundColor: 'white'
+  },
+  preview: {
+    flex: 1,
+    justifyContent: 'flex-end',
+    alignItems: 'center'
+  },
+  capture: {
+    flex: 0,
+    backgroundColor: '#fff',
+    borderRadius: 5,
+    padding: 15,
+    paddingHorizontal: 20,
+    alignSelf: 'center',
+    margin: 20
+  }
+});
