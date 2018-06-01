@@ -1,14 +1,12 @@
 import React from 'react';
 import { Alert, StyleSheet, Text, View, TouchableHighlight } from 'react-native';
 import { TabNavigator, TabBarBottom } from "react-navigation";
-import FirstScreen from './homeTabs/homeTabCaballos';
-import SecondScreen from './homeTabs/homeTabVeterinarios';
-import ThirdScreen from './homeTabs/homeTabFotos';
+import FirstScreen from './caballosTabs/individuosTabs';
+import SecondScreen from './caballosTabs/gruposCabTabs';
 
-var homeTab = TabNavigator({
-    Caballos: { screen: FirstScreen },
-    Veterinarios: { screen: SecondScreen },
-    Fotos: { screen: ThirdScreen },
+var homeTabCaballos = TabNavigator({
+    Individuos: { screen: FirstScreen },
+    Grupos: { screen: SecondScreen },
     }, {
         tabBarPosition: 'top',
         swipeEnabled: false,
@@ -18,7 +16,7 @@ var homeTab = TabNavigator({
             inactiveTintColor: 'gray',
             activeBackgroundColor: '#16AEA8',
             inactiveBackgroundColor: 'white',
-            style: {backgroundColor: 'white', height: 50, padding: 0, margin: 0},
+            style: {backgroundColor: 'white', height: 40, padding: 0, margin: 0},
             labelStyle: {
                 fontSize: 14,
                 justifyContent: 'center'
@@ -30,7 +28,7 @@ var homeTab = TabNavigator({
     }
 );
 
-homeTab.navigationOptions = {
+homeTabCaballos.navigationOptions = {
 }
 
-export default homeTab;
+export default homeTabCaballos;
