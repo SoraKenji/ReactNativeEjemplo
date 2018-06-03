@@ -5,7 +5,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 const window = Dimensions.get('window');
 const tamanioSearchPart = 45;
 
-export default class gruposCabTabs extends React.Component {
+export default class establosTab extends React.Component {
     static navigationOptions = {
         header: null,
     }
@@ -33,16 +33,6 @@ export default class gruposCabTabs extends React.Component {
                         <Ionicons name='ios-add-circle' size={70} color='#16AEA8'/>
                     </View>
                     <Text style={{textAlignVertical: 'center', marginLeft: 10}}>Agregar nuevo</Text>
-                </View>
-                <View style={{backgroundColor: 'white', flexDirection: 'row'}}>
-                    <View style={{width: 75, alignItems: 'center'}}>
-                        <Ionicons name='ios-arrow-dropright' size={70} color='#16AEA8'/>
-                    </View>
-                    <View style={{backgroundColor: 'white', flexDirection: 'column'}}>
-                        
-                        <Text style={{textAlignVertical: 'center', marginLeft: 10, flex: 1}}>Todos mis caballos</Text>
-                        <Text style={{textAlignVertical: 'center', marginLeft: 10, flex: 1}}>1</Text>
-                    </View>
                 </View>
             </View>
         </View>

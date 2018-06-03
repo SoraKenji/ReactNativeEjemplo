@@ -6,7 +6,7 @@ import FirstScreen from './tabs/homeTab';
 import SecondScreen from './tabs/calendarTab';
 import ThirdScreen from './tabs/imagesTab';
 import FourthScreen from './tabs/notificationsTab';
-import FifthScreen from './tabs/userTab';
+import FifthScreen from './tabs/userEstablosTab';
 import Ionicons from 'react-native-vector-icons/Ionicons'
 
 export default TabNavigator({
