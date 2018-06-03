@@ -1,4 +1,4 @@
-#Thu May 31 00:01:32 CLT 2018
+#Sun Jun 03 01:40:10 CLT 2018
 base.0=/Users/dopa/ReactPJ/equilinked/android/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main
 renamed.0=classes.dex
 file.0=/Users/dopa/ReactPJ/equilinked/android/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex
