@@ -41,13 +41,14 @@ export const NotifTab = TabNavigator({
     {
         tabBarOptions: {
             labelStyle:{
-                fontSize:20
+                fontSize:14
                 },
-            activeTintColor: 'white',
-            inactiveTintColor: 'gray',
-            activeBackgroundColor: '#16AEA8',
-            inactiveBackgroundColor: 'white',
-            style: {backgroundColor: 'white', height: 50, padding: 0, margin: 0}
+                showLabel: true,
+                activeTintColor: 'white',
+                inactiveTintColor: 'gray',
+                activeBackgroundColor: '#16AEA8',
+                inactiveBackgroundColor: 'white',
+                style: {backgroundColor: 'white', height: 50, padding: 0, margin: 0},
         },
         tabBarPosition: 'top'
     }

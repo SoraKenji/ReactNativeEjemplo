@@ -5,14 +5,16 @@ import { TabNavigator, TabBarBottom } from "react-navigation";
 import FirstScreen from './tabs/homeTab';
 import SecondScreen from './tabs/calendarTab';
 import ThirdScreen from './tabs/imagesTab';
+import MainCamera from '../Maincamera';
 import FourthScreen from './tabs/notificationsTab';
-import FifthScreen from './tabs/userTab';
+import FifthScreen from './tabs/userEstablosTab';
 import Ionicons from 'react-native-vector-icons/Ionicons'
 
 export default TabNavigator({
     homeTab: {screen: FirstScreen},
     calendarTab: {screen: SecondScreen},
-    imagesTab: {screen: ThirdScreen},
+    imagesTab: {screen: MainCamera},
+    //imagesTab: {screen: ThirdScreen},
     notificationsTab: {screen: FourthScreen},
     userTab: {screen: FifthScreen}
   },

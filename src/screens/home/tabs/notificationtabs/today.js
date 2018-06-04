@@ -18,7 +18,7 @@ export default class today extends React.Component {
 
       render(){
           return(
-              <Text> today </Text>
+              <Text> No hay notificaciones para hoy. </Text>
           )
       }
 }

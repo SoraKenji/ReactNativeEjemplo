@@ -1,27 +1,36 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Alert, StyleSheet, Text, View, TouchableHighlight } from 'react-native';
+import { TabNavigator, TabBarBottom } from "react-navigation";
+import FirstScreen from './homeTabs/homeTabCaballos';
+import SecondScreen from './homeTabs/homeTabVeterinarios';
+import ThirdScreen from './homeTabs/homeTabFotos';
 
-export default class homeTab extends React.Component {
-    static navigationOptions = {
-        header: null,
+var homeTab = TabNavigator({
+    Caballos: { screen: FirstScreen },
+    Veterinarios: { screen: SecondScreen },
+    Fotos: { screen: ThirdScreen },
+    }, {
+        tabBarPosition: 'top',
+        swipeEnabled: false,
+        tabBarOptions: {
+            showLabel: true,
+            activeTintColor: 'white',
+            inactiveTintColor: 'gray',
+            activeBackgroundColor: '#16AEA8',
+            inactiveBackgroundColor: 'white',
+            style: {backgroundColor: 'white', height: 50, padding: 0, margin: 0},
+            labelStyle: {
+                fontSize: 14,
+                justifyContent: 'center'
+            },
+        },
+        tabBarComponent: TabBarBottom,
+        animationEnabled: false,
+        swipeEnabled: false,
     }
-    
-    render() {
-        return ( 
-        <View>
-            <Text>
-                asdsada
-                </Text>
-        </View>
-        );
-    }
+);
+
+homeTab.navigationOptions = {
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default homeTab;
