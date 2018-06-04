@@ -5,9 +5,25 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 const window = Dimensions.get('window');
 const tamanioSearchPart = 45;
 
+
+const CustomHeader = ({ title, subtitle }) => (
+    <View style={{marginTop: 25, backgroundColor: 'white'}}>
+        <View style={{flexDirection: 'row', height: 40}}>
+            <View style={{width: window.width*0.95, justifyContent: 'center', alignItems:'flex-end'}}>
+                <Text style={{textAlign: 'right', width: window.width}}>Editar</Text>
+            </View>
+            <View style={{justifyContent:'center',alignItems:'center',alignSelf:'center', position:'absolute'}}>
+                <Text style={{textAlign: 'center', width: window.width}}>{title}</Text>
+            </View>
+            
+        </View>
+    </View>
+  );
+
+
 export default class establosTab extends React.Component {
     static navigationOptions = {
-        header: null,
+        header: <CustomHeader title="MI PERFIL" subtitle="World" />
     }
 
     render() {

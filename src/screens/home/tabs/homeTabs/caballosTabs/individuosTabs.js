@@ -1,13 +1,17 @@
 import React from 'react';
-import { StyleSheet, Text, View, Button, TextInput, Dimensions } from 'react-native';
+import { StyleSheet, Text, View, Button, TextInput, TouchableHighlight, Dimensions } from 'react-native';
 import { SearchBar } from'react-native-elements';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import { StackNavigator } from 'react-navigation';
 
 const window = Dimensions.get('window');
 const tamanioSearchPart = 45;
 export default class individuosTabs extends React.Component {
     static navigationOptions = {
         header: null,
+    }
+    register(){
+        //this.props.navigation.navigate('agregarCaballo');
     }
     
     render() {
@@ -36,10 +40,14 @@ export default class individuosTabs extends React.Component {
                 </View>
                 <View style={{flex: 1, backgroundColor: 'white', marginLeft: 10, marginTop: 10, marginRight: 10}}>
                     <View style={{flexDirection: 'row'}}>
-                        <View style={{width: 75, alignItems: 'center'}}>
-                            <Ionicons name='ios-add-circle' size={70} color='#16AEA8'/>
-                        </View>
-                        <Text style={{textAlignVertical: 'center', marginLeft: 10}}>Agregar nuevo</Text>
+                        <TouchableHighlight onPress={this.register.bind(this)} underlayColor="#f8f8ff">
+                            <View style={{flexDirection: 'row'}}>
+                                <View style={{width: 75, alignItems: 'center'}}>
+                                    <Ionicons name='ios-add-circle' size={70} color='#16AEA8'/>
+                                </View>
+                                <Text style={{width: window.width - 65, textAlignVertical: 'center', marginLeft: 10}}>Agregar nuevo</Text>
+                            </View>
+                        </TouchableHighlight>
                     </View>
                     <View style={{backgroundColor: 'white', flexDirection: 'row'}}>
                         <View style={{width: 75, alignItems: 'center'}}>

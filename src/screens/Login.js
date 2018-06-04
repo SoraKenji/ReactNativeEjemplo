@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
-import { Text, View, KeyboardAvoidingView,Image,TextInput, Dimensions, ActivityIndicator,TouchableHighlight } from 'react-native';
+import { Button, Text, View, KeyboardAvoidingView, Image,TextInput, Dimensions, ActivityIndicator,TouchableHighlight } from 'react-native';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
+import ModalDropdown from 'react-native-modal-dropdown';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
+const window = Dimensions.get('window');
 const styles = require('../config/styles.js');
 
 export default class Login extends Component{
@@ -17,6 +20,10 @@ export default class Login extends Component{
       };
   }
 
+  static navigationOptions = {
+    header: null
+  }
+
   setPassword(pass){
     this.setState({password:pass})
   }
@@ -24,53 +31,61 @@ export default class Login extends Component{
   setEmail(email){
     this.setState({email:email});
   }
-  register(){
+  iniciar(){
     this.props.navigation.navigate('Home');
+  }
+  
+  register(){
+    this.props.navigation.navigate('Registro');
   }
 
   render() {
     return (
     <KeyboardAwareScrollView>
-      <View>
-        <View style={{flex:1}}>
+      <View style={{flex:1, backgroundColor: 'white'}}>
+        <View style={{alignSelf: 'center', marginTop: 20}}>
+          <Image
+            style={styles.contain}
+            source={require('./EquilinkedLogo.png')}
+          />
         </View>
-        <View style={styles.backgrroundLogin}>
-          <TextInput
-            style={{height: 40, width:200, borderColor: 'transparent', borderWidth: 1, color:'white',textAlign: 'center'}}
-            onChangeText={(text) => this.setEmail(text)}
-            selectionColor={'white'}
-            placeholderTextColor={'white'}
-            placeholder={'Correo de usuario'}
-            underlineColorAndroid={'transparent'} />
-        </View>
-        <View style={styles.backgrroundLogin} >
-          <TextInput
-            style={{height: 40, width:200, borderColor: 'transparent', borderWidth: 1, color:'white',textAlign: 'center'}}
-            onChangeText={(text) => this.setPassword(text)}
-            underlineColorAndroid={'transparent'}
-            secureTextEntry={true}
-            selectionColor={'white'}
-            placeholderTextColor={'white'}
-            placeholder={'Contraseña'}/>
-        </View>
-        <Text style={{backgroundColor:'transparent'}}></Text>
-        <Text style={{backgroundColor:'transparent'}}></Text>
-        <View style={{alignItems: 'center'}}>
-          <TouchableHighlight
-            underlayColor="transparent">
-            <View>
-              <Text>Login</Text>
-            </View>
-          </TouchableHighlight>
-          <Text style={{backgroundColor:'transparent'}}></Text>
-          <TouchableHighlight underlayColor="transparent"
-          onPress= {this.register.bind(this)}>
-          <View>
-            <Text>Registrarse</Text>
+          <View style={{flexDirection: 'row', justifyContent: 'center', marginTop: 10}}>
+            <ModalDropdown style = {{
+                                      width: 80,
+                                      marginLeft: window.width-100,
+                                      borderWidth: 0,
+                                      borderRadius: 3,}}
+                                      options={['Español',
+                                      'English',
+                                      'Русский']}
+                                      defaultValue='Español'/>
+              <Ionicons name='md-arrow-dropdown' size={20} color='#16AEA8'/>
           </View>
-          </TouchableHighlight>
+          <View style={{flexDirection: 'column', height: 80, marginTop: 10}}>
+            <Text style={{width: 150, height: 30}}>Nombre de Usuario</Text>
+            <TextInput style={{height: 30, borderColor: 'gray', borderWidth: 1, flex:1, marginRight: 10}}></TextInput>
+          </View>
+          <View style={{flexDirection: 'column', height: 80}}>
+            <Text style={{width: 150, height: 30}}>Contraseña</Text>
+            <TextInput style={{height: 30, borderColor: 'gray', borderWidth: 1, flex:1, marginRight: 10}}></TextInput>
+          </View>
+          <View style={{marginTop:20}}>
+            <Button
+              onPress={this.iniciar.bind(this)}
+              title="INICIAR SESION"
+              color="#00A7A5"
+            />
+          </View>
+          <View style={{marginTop: 10, marginLeft: 20, marginRight: 20, borderBottomColor: 'gray', borderBottomWidth: 1}}></View>
+          <Text style={{marginTop: 10, alignSelf: 'center', color: 'gray'}}>Si no tienes una cuenta de Equilinked</Text>
+          <View style={{marginTop:20}}>
+            <Button
+              onPress={this.register.bind(this)}
+              title="REGISTRARSE"
+              color="#00A7A5"
+            />
+          </View>
         </View>
-      </View>
     </KeyboardAwareScrollView>
     );
   }

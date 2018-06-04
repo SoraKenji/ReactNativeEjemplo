@@ -33,24 +33,7 @@ var userEstablosTab = TabNavigator({
     }
 );
 
-
-const CustomHeader = ({ title, subtitle }) => (
-    <View style={{marginTop: 25}}>
-        <View style={{flexDirection: 'row', height: 40}}>
-            <View style={{width: window.width*0.95, justifyContent: 'center', alignItems:'flex-end'}}>
-                <Ionicons name='md-more' size={35} color='black'/>
-            </View>
-            <View style={{justifyContent:'center',alignItems:'center',alignSelf:'center', position:'absolute'}}>
-                <Text style={{textAlign: 'center', width: window.width}}>{title}</Text>
-            </View>
-            
-        </View>
-    </View>
-  );
-
 userEstablosTab.navigationOptions = {
-    header: <CustomHeader title="MI PERFIL" subtitle="World" />
-    
 }
 
 export default userEstablosTab;
