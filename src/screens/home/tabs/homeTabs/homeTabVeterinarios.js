@@ -10,7 +10,7 @@ export default class homeTabVeterinarios extends React.Component {
         return ( 
         <View>
             <Text>
-                asdsada
+                -En trabajo-
                 </Text>
         </View>
         );

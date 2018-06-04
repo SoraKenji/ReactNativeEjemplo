@@ -9,8 +9,7 @@ export default class homeTabFotos extends React.Component {
     render() {
         return ( 
         <View>
-            <Text>
-                asdsada
+            <Text>-En trabajo-
                 </Text>
         </View>
         );
